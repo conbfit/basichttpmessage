@@ -30,7 +30,7 @@ def start_server(host='0.0.0.0',port=5555):
                 message = data.decode('utf-8')
                 print(f"[Message] {message}")
             else:
-                printf("[*] disconnected with no data sent")
+                print("[*] disconnected with no data sent")
 
             response = "Message received!\n"
             client_socket.sendall(response.encode('utf-8'))
