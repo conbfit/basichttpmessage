@@ -31,6 +31,7 @@ def send_message(host,port,message):
         print("\n[*] connection closed")
 
 if __name__ == "__main__":
+    print(f"sys.argv={sys.argv}")
     if len(sys.argv) < 2:
         print("incorrect usage")
         sys.exit(1)
