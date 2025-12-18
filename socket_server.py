@@ -17,6 +17,9 @@ def start_server(host='0.0.0.0',port=5555):
         print(f"[!] failed to bind to {host}:{port}: {e}")
         sys.exit(1)
 
+    server_socket.listen(5)
+    print(f"Listening for incoming connections")
+
     try:
         while True:
             #accept connection
@@ -43,5 +46,5 @@ def start_server(host='0.0.0.0',port=5555):
     finally:
         server_socket.close()
 
-    if __name__ == '__main__':
-        start_server()
+if __name__ == '__main__':
+    start_server()
